@@ -31,7 +31,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="hidden md:block"></div>
+          <div className="hidden md:block "></div>
         </div>
         <div className=" md:hidden bg-primary ">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3  ">
