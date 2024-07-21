@@ -30,13 +30,22 @@ body {
 
 @layer utilities {
     .flex-center {
-      @apply flex items-center justify-center
+        @apply flex items-center justify-center
     }
-  
+
     .light-black-bg {
-      @apply bg-[#202630]
+        @apply bg-[#202630]
     }
+
     .light-gray-text {
         @apply text-[#8F8A81]
-      }
+    }
+
+    .text-primary {
+        @apply text-white
+    }
+
+    .bg-primary {
+        @apply bg-black
+    }
 }
