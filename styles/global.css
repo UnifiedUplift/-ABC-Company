@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.screen-max-width {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    position: relative;
+    max-width: 1120px;
+}
+
+
+
+body {
+    color: white;
+    width: 100dvw;
+    overflow-x: hidden;
+    height: 100%;
+    background: #000;
+    border-color: #3b3b3b;
+    user-select: none;
+}
+
+@layer utilities {
+    .flex-center {
+        @apply flex items-center justify-center
+    }
+
+    .light-black-bg {
+        @apply bg-[#202630]
+    }
+
+    .light-gray-text {
+        @apply text-[#8F8A81]
+    }
+
+    .text-primary {
+        @apply text-white
+    }
+
+    .bg-primary {
+        @apply bg-black
+    }
+}
