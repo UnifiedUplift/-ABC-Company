@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Footer = () => {
   return (
     <footer className='bg-primary flex flex-col md:flex-row   gap-10 px-3 py-10 screen-max-width'>

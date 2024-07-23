@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
-
+gsap.registerPlugin(useGSAP);
 const Contact = () => {
     let contactDetails = [
         {
@@ -36,12 +36,7 @@ const Contact = () => {
     ]
 
     useGSAP(() => {
-        gsap.to('#text', {
-            ease: 'bounce.in',
-            opacity: 1,
-            y: 0,
-        })
-
+       
         gsap.fromTo('.para',{
           opacity:0,
           y:20
@@ -54,11 +49,11 @@ const Contact = () => {
     }, [])
     return (
         <section className=' py-10 px-2 screen-max-width'>
-            <h1 id='text' className='text-[40px] text-bold text-center'>Contact Us</h1>
+            <h1 id='text' className='text-[40px] text-bold text-center para'>Contact Us</h1>
             <div className='flex flex-col md:flex-row  gap-10 mt-10'>
 
                 <div className='md:w-[55%]'>
-                    <h3 className='text-[25px] font-extrabold max-w-[480px]'>Let’s discusson something cool together</h3>
+                    <h3 className='text-[25px] font-extrabold max-w-[480px] para'>Let’s discusson something cool together</h3>
 
                     <div className='flex flex-col gap-5 mt-10'>
                         {contactDetails?.map((data, i) => (
