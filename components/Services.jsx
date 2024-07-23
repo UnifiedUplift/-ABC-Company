@@ -23,7 +23,7 @@ const Services = () => {
   ]
   return (
     <section className='screen-max-width'>
-      <h2 className='text-[40px] text-bold text-center opacity-0 translate-y-10'>Our Services</h2>
+      <h2 className='text-[40px] text-bold text-center '>Our Services</h2>
       <div className='flex py-10 px-2 w-full justify-center md:justify-between items-center flex-col md:flex-row '>
         {
           services?.map((data, i) => (
