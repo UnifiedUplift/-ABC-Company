@@ -21,17 +21,17 @@ const Services = () => {
 
   ]
   return (
-    <section className=''>
+    <section className='screen-max-width'>
       <h2 className='text-[40px] text-bold text-center'>Our Services</h2>
-      <div className='flex py-10 px-2 gap-4 justify-center items-center flex-col md:flex-row '>
+      <div className='flex py-10 px-2 w-full justify-center md:justify-between items-center flex-col md:flex-row '>
         {
           services?.map((data, i) => (
-            <div key={i} className='bg-white rounded-2xl max-w-72 p-2  border-2 border-green-700'>
+            <div key={i} className='bg-white rounded-2xl max-w-72 p-2 '>
               <div className='flex flex-col justify-center items-center '>
-                <Image src={data?.url} alt={data?.url} width={52} height={52} />
-                <h4 className='text-black mt-2 font-bold'>{data?.title}</h4>
+                <Image src={data?.url} alt={data?.url} width={72} height={72} />
+                <h4 className='text-black mt-2 font-extrabold'>{data?.title}</h4>
               </div>
-              <p className='text-black mt-2'>{data?.discription}</p>=
+              <p className='text-black mt-2 font-medium'>{data?.discription}</p>=
             </div>
           ))
         }
