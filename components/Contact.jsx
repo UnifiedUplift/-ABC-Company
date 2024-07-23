@@ -1,7 +1,9 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
-
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
+gsap.registerPlugin(useGSAP);
 const Contact = () => {
     let contactDetails = [
         {
@@ -32,17 +34,30 @@ const Contact = () => {
             profile: "https://x.com/"
         }
     ]
-    return (
-        <section className=' py-10 px-2'>
-            <h1 className='text-[40px] text-bold text-center'>Contact Us</h1>
-            <div className='flex flex-col md:flex-row justify-center  gap-10 mt-10'>
 
-                <div className=''>
-                    <h3 className='text-[25px] font-extrabold max-w-[280px]'>Let’s discusson something cool together</h3>
+    useGSAP(() => {
+       
+        gsap.fromTo('.para',{
+          opacity:0,
+          y:20
+        },{
+          opacity:1,
+          y:0,
+          stagger:0.1
+        })
+
+    }, [])
+    return (
+        <section className=' py-10 px-2 screen-max-width'>
+            <h1 id='text' className='text-[40px] text-bold text-center para'>Contact Us</h1>
+            <div className='flex flex-col md:flex-row  gap-10 mt-10'>
+
+                <div className='md:w-[55%]'>
+                    <h3 className='text-[25px] font-extrabold max-w-[480px] para'>Let’s discusson something cool together</h3>
 
                     <div className='flex flex-col gap-5 mt-10'>
                         {contactDetails?.map((data, i) => (
-                            <div className='flex gap-5 items-center'>
+                            <div className='flex gap-5 items-center font-medium'>
                                 <div className='bg-white w-[45px] flex justify-center items-center rounded-sm p-2'>
                                     <Image src={data?.url} alt={data?.url} width={24} height={24} />
                                 </div>
@@ -52,14 +67,15 @@ const Contact = () => {
                     </div>
 
                 </div>
-                <div className='md:w-[40%]'>
+                <div className='md:w-[45%]'>
                     <form className='flex flex-col gap-2 ' action="">
                         <div className='flex flex-col gap-2 '>
                             <input className="rounded-lg p-2 focus:outline-none text-black " type="text" placeholder='Enter Your Name' />
                             <input className="rounded-lg p-2 focus:outline-none  text-black " type="text" placeholder='Enter Your Email' />
+                            <input className="rounded-lg p-2 focus:outline-none  text-black " type="text" placeholder='Enter Your Mobile Number' />
                             <textarea className="rounded-lg p-2 focus:outline-none  text-black " name="" placeholder='Enter Message' id=""></textarea>
                         </div>
-                        <button className='bg-white text-black flex gap-2 p-3 rounded-lg items-center justify-center '>  <Image src={'/assets/send.png'} alt={"sentImage"} width={18} height={18} />send message</button>
+                        <button className='bg-white text-black flex gap-2 p-3 font-extrabold rounded-lg items-center justify-center '>  <Image src={'/assets/send.png'} alt={"sentImage"} width={18} height={18} />send message</button>
                     </form>
 
                 </div>
