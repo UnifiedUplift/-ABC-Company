@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -14,12 +15,13 @@ function page() {
       <section id="services">
         <Services />
       </section>
+      <section id="blog">
+        <About />
+      </section>
       <section id="contact">
         <Contact />
       </section>
-      <section id="blog">
-        <Footer />
-      </section>
+      <Footer />
     </div>
   );
 }
