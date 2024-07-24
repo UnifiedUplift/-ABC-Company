@@ -9,7 +9,7 @@ const Navbar = () => {
     { label: "Home", to: "home" },
     { label: "Services", to: "services"  },
     { label: "Contact", to: "contact" },
-    { label: "Blog", to: "blog" },
+    { label: "About", to: "about" },
   ];
 
   const tradeRef = useRef(null);

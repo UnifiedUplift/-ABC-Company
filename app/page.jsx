@@ -15,7 +15,7 @@ function page() {
       <section id="services">
         <Services />
       </section>
-      <section id="blog">
+      <section id="about">
         <About />
       </section>
       <section id="contact">
