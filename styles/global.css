@@ -39,6 +39,9 @@ body {
   [data-scroll-section] {
     overflow: hidden;
   }
+  [data-scroll-container] > * {
+    position: relative;
+  }
 
 @layer utilities {
     .flex-center {

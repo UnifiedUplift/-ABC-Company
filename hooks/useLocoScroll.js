@@ -4,14 +4,23 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 const useLocoScroll = () => {
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-    });
+    if (typeof window !== 'undefined') {
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        lerp: 0.1,  // Adjust the easing function for smoother scrolling
+        smartphone: {
+          smooth: true
+        },
+        tablet: {
+          smooth: true
+        }
+      });
 
-    return () => {
-      scroll.destroy();
-    };
+      return () => {
+        scroll.destroy();
+      };
+    }
   }, []);
 };
 
