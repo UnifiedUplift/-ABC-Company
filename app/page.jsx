@@ -1,3 +1,5 @@
+'use client'; 
+import useLocoScroll from '@/hooks/useLocoScroll';
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -6,8 +8,9 @@ import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 
 function page() {
+  useLocoScroll();
   return (
-    <div>
+    <div data-scroll-container>
       <Navbar />
       <section id="home">
         <Hero />

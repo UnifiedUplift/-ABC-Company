@@ -36,6 +36,18 @@ body {
     user-select: none;
 }
 
+[data-scroll-container] {
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  [data-scroll-section] {
+    overflow: hidden;
+  }
+  [data-scroll-container] > * {
+    position: relative;
+  }
+
 @layer utilities {
     .flex-center {
         @apply flex items-center justify-center
