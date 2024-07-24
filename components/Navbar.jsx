@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="font-bold text-xl text-white hover:text-white">
+            <h1 className="font-bold text-2xl text-white hover:text-white">
               TRADE
             </h1>
           </div>
@@ -23,7 +23,7 @@ const Navbar = () => {
                   <a
                     key={index}
                     href={link.href}
-                    className="text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-white hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                   >
                     {link.label}
                   </a>
