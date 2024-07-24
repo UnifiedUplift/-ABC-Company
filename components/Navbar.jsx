@@ -1,11 +1,13 @@
+'use client'
 import React from "react";
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = () => {
   const links = [
-    { label: "Home", href: "/" },
-    { label: "Services", href: "/" },
-    { label: "Contact", href: "/" },
-    { label: "Blog", href: "/" },
+    { label: "Home", to: "home" },
+    { label: "Services", to: "services"  },
+    { label: "Contact", to: "contact" },
+    { label: "Blog", to: "blog" },
   ];
   return (
     <nav className="bg-primary shadow-lg">
@@ -20,13 +22,15 @@ const Navbar = () => {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {links.map((link, index) => (
-                  <a
+                  <ScrollLink
                     key={index}
-                    href={link.href}
+                    to={link.to}
+                    smooth={true}
+                    duration={500}
                     className="text-white hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                   >
                     {link.label}
-                  </a>
+                  </ScrollLink>
                 ))}
               </div>
             </div>
