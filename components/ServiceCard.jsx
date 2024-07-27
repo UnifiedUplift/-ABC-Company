@@ -19,12 +19,16 @@ const ServiceCard = ({data}) => {
 
     }, [])
     return (
-        <div className='bg-white rounded-2xl max-w-72 p-2 '>
-            <div className='flex flex-col justify-center items-center '>
-                <Image src={data?.url} alt={data?.url} width={72} height={72} />
-                <h4 id='text' className='text-black mt-2 font-extrabold para'>{data?.title}</h4>
+        <div className='bg-white rounded-2xl max-w-34xl  flex flex-col p-10'>
+             <h4 id='text' className='text-black text-[20px] mt-2 font-extrabold para'>{data?.title}</h4>
+             
+            <div className='flex flex-row justify-center items-center  gap-5'>
+           
+                <p className='text-black mt-2  para max-w-96'>{data?.discription}</p>
+                <Image src={data?.url} alt={data?.url} width={100} height={100} />
+               
             </div>
-            <p className='text-black mt-2 font-medium para'>{data?.discription}</p>=
+           
         </div>
     )
 }
