@@ -22,6 +22,24 @@ const Services = () => {
         "Boost your online presence and attract more visitors with our expert SEO strategies for higher search engine rankings.",
       url: "/assets/seo.png",
     },
+    {
+      title: "Web Designing",
+      details:
+        "Craft stunning, responsive websites that captivate your audience and enhance user experience with our creative design expertise.",
+      url: "/assets/web-design.png",
+    },
+    {
+      title: "Web Development",
+      details:
+        "Develop robust, scalable websites tailored to your needs, ensuring top performance and seamless functionality.",
+      url: "/assets/wed-development.png",
+    },
+    {
+      title: "SEO",
+      details:
+        "Boost your online presence and attract more visitors with our expert SEO strategies for higher search engine rankings.",
+      url: "/assets/seo.png",
+    },
   ];
   return (
     <section className="pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px] bg-white">
