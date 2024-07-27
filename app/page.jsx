@@ -11,7 +11,8 @@ function page() {
   // useLocoScroll();
   return (
     // <div data-scroll-container>
-    <div>
+    <div className="">
+      <div>
       <section className="fixed w-full z-10">
         <Navbar />
       </section>
@@ -19,18 +20,19 @@ function page() {
       <section id="home">
         <Hero />
       </section>
+      </div>
       <section id="services" data-scroll-section>
         <Services />
       </section>
-      <section id="about" data-scroll-section>
+      {/* <section id="about" data-scroll-section>
         <About />
-      </section>
-      <section id="contact" data-scroll-section>
+      </section> */}
+      {/* <section id="contact" data-scroll-section>
         <Contact />
       </section>
       <section data-scroll-container>
       <Footer  />
-      </section>
+      </section> */}
     </div>
   );
 }
