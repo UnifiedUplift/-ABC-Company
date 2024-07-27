@@ -10,7 +10,7 @@ import Services from "@/components/Services";
 function page() {
   useLocoScroll();
   return (
-    <div data-scroll-container>
+    <div data-scroll-container >
       <Navbar />
       <section id="home" data-scroll-section>
         <Hero />

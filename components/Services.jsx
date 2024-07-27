@@ -22,9 +22,9 @@ const Services = () => {
 
   ]
   return (
-    <section className='screen-max-width'>
+    <section className='screen-max-width py-10'>
       <h2 className='text-[40px] text-bold text-center '>Our Services</h2>
-      <div className='flex py-10 px-2 w-full justify-center md:justify-between items-center flex-col md:flex-row '>
+      <div className='flex py-10 px-2 w-full justify-center gap-10 items-center flex-col  '>
         {
           services?.map((data, i) => (
            <ServiceCard data={data} key={i}/>
