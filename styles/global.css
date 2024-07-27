@@ -32,7 +32,7 @@ body {
     overflow-x: hidden;
     height: 100%;
     /* background: #1A3636; */
-    background: black;
+    /* background: black; */
     border-color: #3b3b3b;
     user-select: none;
 }

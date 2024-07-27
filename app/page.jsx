@@ -27,10 +27,10 @@ function page() {
       {/* <section id="about" data-scroll-section>
         <About />
       </section> */}
-      {/* <section id="contact" data-scroll-section>
+      <section id="contact" data-scroll-section>
         <Contact />
       </section>
-      <section data-scroll-container>
+      {/* <section data-scroll-container>
       <Footer  />
       </section> */}
     </div>
