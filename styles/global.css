@@ -26,12 +26,12 @@ body {
     width: 100dvw;
     overflow-x: hidden;
     height: 100%;
-    background: #000;
+    /* background: #000; */
     border-color: #3b3b3b;
     user-select: none;
 }
 
-[data-scroll-container] {
+/* [data-scroll-container] {
     overflow: hidden;
     height: 100%;
   }
@@ -41,7 +41,7 @@ body {
   }
   [data-scroll-container] > * {
     position: relative;
-  }
+  } */
 
 @layer utilities {
     .flex-center {
