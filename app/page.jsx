@@ -11,7 +11,6 @@ function page() {
   useLocoScroll();
   return (
     <div data-scroll-container>
-      <Navbar />
       <section id="home">
         <Hero />
       </section>
