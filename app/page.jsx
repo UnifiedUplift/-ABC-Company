@@ -1,5 +1,5 @@
 "use client";
-import useLocoScroll from "@/hooks/useLocoScroll";
+// import useLocoScroll from '@/hooks/useLocoScroll';
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -8,11 +8,15 @@ import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
 
 function page() {
-  useLocoScroll();
+  // useLocoScroll();
   return (
-    <div data-scroll-container >
-      <Navbar />
-      <section id="home" data-scroll-section>
+    // <div data-scroll-container>
+    <div>
+      <section className="fixed w-full z-10">
+        <Navbar />
+      </section>
+
+      <section id="home">
         <Hero />
       </section>
       <section id="services" data-scroll-section>
