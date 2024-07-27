@@ -19,16 +19,18 @@ function page() {
       <section id="home">
         <Hero />
       </section>
-      <section id="services">
+      <section id="services" data-scroll-section>
         <Services />
       </section>
-      <section id="about">
+      <section id="about" data-scroll-section>
         <About />
       </section>
-      <section id="contact">
+      <section id="contact" data-scroll-section>
         <Contact />
       </section>
-      <Footer />
+      <section data-scroll-container>
+      <Footer  />
+      </section>
     </div>
   );
 }
