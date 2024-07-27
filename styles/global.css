@@ -38,15 +38,15 @@ body {
 
 [data-scroll-container] {
     overflow: hidden;
-    height: 100%;
+    position: relative; /* Ensure this is set */
   }
   
   [data-scroll-section] {
     overflow: hidden;
+    position: relative; /* Ensure this is set */
   }
-  [data-scroll-container] > * {
-    position: relative;
-  }
+  
+  
 
 @layer utilities {
     .flex-center {

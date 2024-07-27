@@ -1,13 +1,13 @@
-'use client'
+"use client";
 import React, { useEffect, useRef } from "react";
-import { Link as ScrollLink } from 'react-scroll';
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
+import { Link as ScrollLink } from "react-scroll";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Navbar = () => {
   const links = [
     { label: "Home", to: "home" },
-    { label: "Services", to: "services"  },
+    { label: "Services", to: "services" },
     { label: "Contact", to: "contact" },
     { label: "About", to: "about" },
   ];
@@ -15,16 +15,18 @@ const Navbar = () => {
   const tradeRef = useRef(null);
   const linkRefs = useRef([]);
   useEffect(() => {
-    const tradeLetters = tradeRef.current.querySelectorAll('.letter');
-    gsap.fromTo(tradeLetters, 
+    const tradeLetters = tradeRef.current.querySelectorAll(".letter");
+    gsap.fromTo(
+      tradeLetters,
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, stagger: 0.1, duration: 0.5 }
     );
 
     // Animate link labels
-    linkRefs.current.forEach(linkRef => {
-      const letters = linkRef.querySelectorAll('.letter');
-      gsap.fromTo(letters, 
+    linkRefs.current.forEach((linkRef) => {
+      const letters = linkRef.querySelectorAll(".letter");
+      gsap.fromTo(
+        letters,
         { opacity: 0, y: 20 },
         { opacity: 1, y: 0, stagger: 0.1, duration: 0.5 }
       );
@@ -35,9 +37,14 @@ const Navbar = () => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1  ref={tradeRef}  className="font-bold text-2xl text-white hover:text-white">
-            {"TRADEERTR".split("").map((char, index) => (
-                <span key={index} className="letter">{char}</span>
+            <h1
+              ref={tradeRef}
+              className="font-bold text-2xl text-white hover:text-white"
+            >
+              {"TRADEERTR".split("").map((char, index) => (
+                <span key={index} className="letter">
+                  {char}
+                </span>
               ))}
             </h1>
           </div>
@@ -52,12 +59,14 @@ const Navbar = () => {
                     duration={500}
                     className="text-white hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                   >
-                   <span
-                      ref={el => linkRefs.current[index] = el}
+                    <span
+                      ref={(el) => (linkRefs.current[index] = el)}
                       className="link-label"
                     >
                       {link.label.split("").map((char, idx) => (
-                        <span key={idx} className="letter">{char}</span>
+                        <span key={idx} className="letter">
+                          {char}
+                        </span>
                       ))}
                     </span>
                   </ScrollLink>
