@@ -1,36 +1,22 @@
-"use client"
-import Image from 'next/image'
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
+import Image from "next/image";
+import React from "react";
 
-gsap.registerPlugin(useGSAP);
-
-const ServiceCard = ({data}) => {
-    useGSAP(() => {
-    
-        gsap.fromTo('.para',{
-          opacity:0,
-          y:20
-        },{
-          opacity:1,
-          y:0,
-          stagger:0.1
-        })
-
-    }, [])
-    return (
-        <div className='bg-white rounded-2xl max-w-34xl  flex flex-col p-10'>
-             <h4 id='text' className='text-black text-[20px] mt-2 font-extrabold para'>{data?.title}</h4>
-             
-            <div className='flex flex-row justify-center items-center  gap-5'>
-           
-                <p className='text-black mt-2  para max-w-96'>{data?.discription}</p>
-                <Image src={data?.url} alt={data?.url} width={100} height={100} />
-               
-            </div>
-           
+const ServiceCard = ({ title, details, url }) => {
+  return (
+    <>
+      <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+        <div className="mb-9 rounded-[20px] bg-white p-10 hover:shadow-lg dark:bg-dark-2 md:px-7 xl:px-10 shadow">
+          <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
+          <Image src={url} alt={title} width={50} height={50}  />
+          </div>
+          <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-black">
+            {title}
+          </h4>
+          <p className="text-body-color text-slate-500">{details}</p>
         </div>
-    )
-}
+      </div>
+    </>
+  );
+};
 
-export default ServiceCard
+export default ServiceCard;
